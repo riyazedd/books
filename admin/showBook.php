@@ -5,6 +5,12 @@ $sql="SELECT users.id,users.name,category.*,books.* FROM books
 JOIN users ON users.id=books.author_id
 JOIN category ON category.cid=books.category_id";
 $bookQuery=mysqli_query($conn,$sql);
+
+if(!empty($_GET['bid'])){
+    $id=$_GET['bid'];
+    $sql="DELETE FROM books WHERE bid='$id'";
+    $result=mysqli_query($conn,$sql);
+}
 ?>
 
 <div class="row">
@@ -40,7 +46,7 @@ $bookQuery=mysqli_query($conn,$sql);
                     <td><?=$book['page_number']?></td>
                     <td>
                         <a href="" class="btn btn-success">Edit</a>
-                        <a href="showBook.php?id=<?php echo $book["bid"];?>" class="btn btn-danger">Delete</a>
+                        <a href="showBook.php?bid=<?php echo $book["bid"];?>" class="btn btn-danger">Delete</a>
                     </td>
                 </tr>
             </tbody>
