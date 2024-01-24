@@ -1,9 +1,10 @@
 <?php
 require_once "header.php";
 
-$sql="SELECT * FROM books";
+$sql="SELECT users.id,users.name,category.*,books.* FROM books
+JOIN users ON users.id=books.author_id
+JOIN category ON category.cid=books.category_id";
 $bookQuery=mysqli_query($conn,$sql);
-
 ?>
 
 <div class="row">
@@ -31,8 +32,8 @@ $bookQuery=mysqli_query($conn,$sql);
             <tbody>
                 <tr>
                     <td><?=$book['bid']?></td>
-                    <td><?=$book['author_id']?></td>
-                    <td><?=$book['category_id']?></td>
+                    <td><?=$book['name']?></td>
+                    <td><?=$book['cat_name']?></td>
                     <td><?=$book['title']?></td>
                     <td><?=$book['price']?></td>
                     <td><img src="uploads/<?=$book['image']?>" alt="" width="50"></td>

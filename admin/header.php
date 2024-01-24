@@ -32,7 +32,7 @@ $loginUser=$_SESSION['user'];
         </div>
         <div class="col-md-12">
             <a href="user.php">Show Users</a> &ensp;&ensp;
-            <a href="">Manage Category</a> &ensp;&ensp;
+            <a href="category.php">Manage Category</a> &ensp;&ensp;
             <a href="addBook.php">Add Books</a> &ensp;&ensp;
             <a href="showBook.php">Show Books</a> &ensp;&ensp;
         </div>
