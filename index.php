@@ -22,8 +22,9 @@ $result=mysqli_query($conn,$sql);
           <div class="card-body">
             <h5 class="card-title"><?= $book['title'] ?></h5>
             <p class="card-text">Author: <?= $book['name'] ?></p>
+            <p class="card-text">Category: <?= $book['cat_name'] ?></p>
             <p class="card-text">Price: <?= $book['price'] ?></p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <a href="#" class="btn btn-primary">Buy Now</a>
           </div>
         </div>
       </div>
