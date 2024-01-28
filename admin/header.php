@@ -35,6 +35,7 @@ $loginUser=$_SESSION['user'];
             <a href="category.php">Manage Category</a> &ensp;&ensp;
             <a href="addBook.php">Add Books</a> &ensp;&ensp;
             <a href="showBook.php">Show Books</a> &ensp;&ensp;
+            <a href="../index.php">Visit Site</a> &ensp;&ensp;
         </div>
         <div class="col-md-12">
             
